@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+	"target": "es5",
+	"esModuleInterop": true,
+	"allowSyntheticDefaultImports": true,
+	"jsx": "react-jsx",
+	"module": "ESNext",
+	"baseUrl": "src"
+  }
+}
