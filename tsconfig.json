@@ -5,6 +5,7 @@
 	"allowSyntheticDefaultImports": true,
 	"jsx": "react-jsx",
 	"module": "ESNext",
-	"baseUrl": "src"
+	"baseUrl": "src",
+	"moduleResolution": "node"
   }
 }

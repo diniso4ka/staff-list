@@ -1,0 +1,36 @@
+.List{
+  font-family: var(--font-family-main);
+  min-width: 850px;
+}
+
+.items{
+  margin: 20px 0 0 0;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+.headerItem{
+  padding: 10px 10px 10px 20px;
+  height: 100%;
+  border-right:  1px solid rgba(0,0,0,0.1);
+  font-size: var(--font-size-m);
+
+  &:first-child{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:last-child{
+    border: none;
+  }
+}
+
+.sort{
+  cursor: pointer;
+}
+

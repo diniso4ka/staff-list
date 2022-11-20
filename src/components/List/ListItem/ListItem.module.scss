@@ -1,0 +1,20 @@
+.ListItem{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-top: 10px;
+  color: black;
+  &:hover{
+    background-color: #efefef;
+  }
+}
+
+.label{
+  cursor: pointer;
+  padding: 5px 10px 10px 20px;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+}

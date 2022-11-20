@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./variables/global";
+
+.app{
+  font-family: var(--font-family-main);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.pageWrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
