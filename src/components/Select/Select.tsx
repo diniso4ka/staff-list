@@ -1,15 +1,16 @@
 import { FC, useEffect, useState } from "react";
 import s from "./Select.module.scss";
 import cls from "classnames";
+import { Employee } from "../../app/store/types";
 
 interface SelectProps {
   className?: string;
-  setCollapsed: any;
+  setCollapsed: (status: boolean) => void;
   collapsed: boolean;
   onClick: (e: MouseEvent) => void;
   selected?: string;
   labels: string[];
-  setValues: any;
+  setValues: (employee) => void;
 }
 
 export const Select: FC<SelectProps> = ({

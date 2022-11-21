@@ -66,6 +66,10 @@ export const UpdateForm: FC<UpdateFormProps> = ({ className }) => {
     }
   }, []);
 
+  useEffect(() => {
+    console.log(values.isArchive);
+  }, [values]);
+
   return (
     <div
       onClick={() => setCollapsed(true)}
@@ -105,7 +109,7 @@ export const UpdateForm: FC<UpdateFormProps> = ({ className }) => {
           <div>
             <label className={s.label}>В архиве</label>
             <input
-              defaultChecked={values.isArchive || false}
+              checked={values.isArchive}
               onChange={(e) => onChangeValue(e.target.checked, "isArchive")}
               className={s.input}
               type={"checkbox"}
