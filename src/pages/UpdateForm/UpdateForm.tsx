@@ -57,6 +57,8 @@ export const UpdateForm: FC<UpdateFormProps> = ({ className }) => {
     setValues((prev) => ({ ...prev, [input]: e }));
   };
 
+  // Если в url параметрах есть айди, сохранить данные пользователя в инпутах
+
   useEffect(() => {
     if (params.id) {
       const employee = employeeData.find(
@@ -65,10 +67,6 @@ export const UpdateForm: FC<UpdateFormProps> = ({ className }) => {
       setValues(employee);
     }
   }, []);
-
-  useEffect(() => {
-    console.log(values.isArchive);
-  }, [values]);
 
   return (
     <div
