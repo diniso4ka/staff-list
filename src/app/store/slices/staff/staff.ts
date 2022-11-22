@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Employee } from "../../types";
 import { EmployeeMock } from "shared/mocks/employees";
+import { idGenerator } from "../../../../shared/helpers/idGenerator";
 
 interface InitialStateType {
   items: Employee[];
@@ -18,10 +19,8 @@ const staffSlice = createSlice({
   reducers: {
     createNewEmployee(state, action) {
       const newEmployee = action.payload;
-      state.items = [
-        ...state.items,
-        { ...newEmployee, id: state.items.length + 2 },
-      ];
+      const id = idGenerator(state.items);
+      state.items = [...state.items, { ...newEmployee, id: id }];
     },
     updateEmployee(state, action) {
       const updatedEmployee = action.payload;

@@ -23,9 +23,6 @@ export const Home: FC<HomeProps> = ({ className }) => {
   useEffect(() => {
     setData(() => [...sortArray(staffData)]);
   }, []);
-  useEffect(() => {
-    console.log("rerender");
-  }, [data]);
 
   return (
     <div className={cls(s.Home, className)}>
