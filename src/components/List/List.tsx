@@ -3,7 +3,7 @@ import s from "./List.module.scss";
 import cls from "classnames";
 import { ListItem } from "./ListItem";
 import { Employee } from "app/store/types";
-import { sortByAlphabet } from "../../shared/helpers/sortArray";
+import { sortByAlphabet } from "shared/helpers/sortArray";
 
 interface ListProps {
   className?: string;
@@ -17,14 +17,16 @@ export const List: FC<ListProps> = ({ className, data }) => {
   const onHandleSort = () => {
     setSorted(!sorted);
     if (!sorted) {
-      data.sort(sortByAlphabet);
+      setDataItems(dataItems.sort(sortByAlphabet));
     } else {
-      data.sort(sortByAlphabet).reverse();
+      setDataItems(dataItems.sort(sortByAlphabet).reverse());
     }
   };
 
   useEffect(() => {
-    setDataItems(data);
+    if (!dataItems.length) {
+      setDataItems(data);
+    }
   }, [data]);
 
   return (

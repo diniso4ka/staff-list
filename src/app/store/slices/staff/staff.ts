@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Employee } from "../../types";
 import { EmployeeMock } from "shared/mocks/employees";
-import { sortArray } from "shared/helpers/sortArray";
 
 interface InitialStateType {
   items: Employee[];
@@ -21,7 +20,7 @@ const staffSlice = createSlice({
       const newEmployee = action.payload;
       state.items = [
         ...state.items,
-        { ...newEmployee, id: state.items.length + 1 },
+        { ...newEmployee, id: state.items.length + 2 },
       ];
     },
     updateEmployee(state, action) {

@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import s from "./Select.module.scss";
 import cls from "classnames";
-import { Employee } from "../../app/store/types";
 
 interface SelectProps {
   className?: string;
