@@ -4,6 +4,6 @@ export function idGenerator(employees) {
   if (coincidence) {
     return id;
   } else {
-    return idGenerator(employees);
+    idGenerator(employees);
   }
 }
